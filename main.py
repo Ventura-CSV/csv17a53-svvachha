@@ -42,4 +42,12 @@ def my_floor(x: float) -> int:
 
 def my_ceil(x: float) -> int:
     """Return ceil(x) without using math.ceil."""
-    pass
+    
+    n = int(x)
+
+    if x == n:
+        return n
+    elif x > 0:
+        return n + 1
+    else:
+        return n

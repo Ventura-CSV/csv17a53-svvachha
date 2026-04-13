@@ -19,7 +19,14 @@ def find_non_injective_pair(mapping: dict) -> tuple | None:
 
 def find_non_surjective_element(mapping: dict, target: set):
     """Return one target element with no input mapping to it, or None if surjective."""
-    pass
+    
+    values = set(mapping.values())
+
+    for element in target:
+        if element not in values:
+            return element
+
+    return None
 
 
 def my_floor(x: float) -> int:
